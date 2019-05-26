@@ -7,17 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-    
-        <Grid>
 
-        
+    <Grid>
+
+
         <Grid.ColumnDefinitions>
-            
+
             <ColumnDefinition Width ="100" />
             <ColumnDefinition Width ="100" />
             <ColumnDefinition Width ="*" />
-    
-    </Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
             <StackPanel Background="Gray">
@@ -43,10 +43,20 @@
         </Grid>
 
         <Grid Grid.Column="2">
-            <DataGrid>
-
-            </DataGrid>
+            <ListView Name="WishList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Category}" Width="100">Category</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Status}" Width="100">Status</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="100">Name</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Genre}" Width="150">Additional information</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Comment}" Width="150">Comment</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+                <ListView.Resources>
+                </ListView.Resources>
+            </ListView>
         </Grid>
     </Grid>
-        
+
 </Window>

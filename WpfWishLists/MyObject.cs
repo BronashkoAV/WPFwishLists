@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfWishLists
 {
+    //Представление абстрактного списка
     class MyObject
     {
         private readonly int id;
